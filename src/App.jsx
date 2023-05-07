@@ -2,6 +2,8 @@ import "./App.css";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Events from "./screens/Events";
+import Alumni from "./screens/Alumni";
+import Gallery from "./screens/Gallery";
 import Batch from "./components/Batch";
 import CustomAppBar from "./components/AppBar";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
@@ -34,7 +36,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/alumni" element={<div>Hello Wrold</div>} />
+        <Route path="/alumni" element={<Alumni />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </ThemeProvider>
   );
