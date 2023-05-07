@@ -1,0 +1,54 @@
+.ncc-logo {
+  filter: drop-shadow(0 0 2px #444);
+}
+
+body {
+  height: 100vw;
+  width: 100%;
+  background-color: #d8d8d8;
+}
+
+.page-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  perspective: 4000px;
+}
+.page-container .card-container {
+  aspect-ratio: 1.2;
+  height: 80vw;
+  max-height: 300px;
+  padding: 0;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+}
+.page-container .card-container.flipped .front {
+  transform: rotateY(180deg);
+}
+.page-container .card-container.flipped .back {
+  transform: rotateY(0deg);
+}
+.page-container .card-container .front,
+.page-container .card-container .back {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 1px 10px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform ease 500ms;
+}
+.page-container .card-container .front {
+  background-color: #e26361;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.page-container .card-container .back {
+  background-color: #e26361;
+  transform: rotateY(-180deg);
+}/*# sourceMappingURL=App.css.map */
