@@ -4,8 +4,6 @@ import About from "./screens/About";
 import Events from "./screens/Events";
 import Alumni from "./screens/Alumni";
 import Gallery from "./screens/Gallery";
-import Batch from "./components/Batch";
-import CustomAppBar from "./components/AppBar";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 

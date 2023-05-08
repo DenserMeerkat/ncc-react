@@ -1,5 +1,6 @@
 export const eventList = [
   {
+    id: "6",
     title: "Cycle Rally",
     date: "27/07/2022",
     location: "Anna University, Chennai",
@@ -7,21 +8,25 @@ export const eventList = [
       "      Cadets of NCC Army Wing, Anna University participated in the cycle rally conducted for the International Chess Olympiad inauguration event on 27th July 2022.The rally commenced from Presidency college, Triplicane to Jawaharlal Nehru stadium, Chennai Central. Cadets were accompanied by ANO’s and PI staff. The “44th Chess Olympiad” organised by the Federation Internationale des Eches(FIDE) to promote the game of chess, was held in Chennai, Tamil Nadu and it was the first time to be conducted in India, after being moved out of Moscow in Russia. Grandmaster Vishwanathan Anand carried the Olympiad torch. Civilians from various organisations like NSO,YRC together with the NCC cadets of various units followed him. Nearly 4.9 kilometers were covered in this rally. The cadets volunteered for the rally and gave their active participation. ",
     imgList: [
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",
   },
   {
+    id: "5",
     title: "Cycle Rally",
     date: "11/12/2022",
     location: "Anna University, Chennai",
@@ -29,24 +34,26 @@ export const eventList = [
         Cadets carried placards and banners on \"Self4society\", which is a mobile-based platform that has been imagined with the idea of streamlining the government-identified domains, and the social activities of the corporates and their employees. After which refreshments were provided to the cadets.`,
     imgList: [
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
-
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
-
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",
   },
 
   {
+    id: "4",
     title: "Independence Day",
     date: "15/08/2022",
     location: "Anna University, Chennai",
@@ -61,21 +68,25 @@ export const eventList = [
           `,
     imgList: [
       {
-        caption: "assets/imaxges/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",
   },
   {
+    id: "3",
     title: "Convocation Address",
     date: "29/07/2022",
     location: "Anna University, Chennai",
@@ -84,21 +95,25 @@ export const eventList = [
                   The Degree holders and their parents were given separate venues and the cadets were present in order to guide them to their allotted location, and helped in the smooth conduction of this event.`,
     imgList: [
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",
   },
   {
+    id: "2",
     title: "CATC cum IGC/RDC Training Camp",
     date: "25/08/22",
     location: "Shree Chandra Prabhu Jain College, Minjur",
@@ -107,21 +122,25 @@ export const eventList = [
         The cadets left the university on the morning of 25th August, 2022 and reached the camp location by 12:30 PM. The first day was occupied with documentation work and other formalities. On the second day the cadets were taught Drill Square Test (DST) procedures and on the third day, the first selection process took place. The selection process included style march both with and without arms, and then word of command test. Over the next three days, subsequent selection was carried out to choose those who would go on to attend the IGC training camp. The selection was led by the commanding officers of the 3 BN and 13 BN. The camp also presented opportunities for cultural performances like singing, dancing, instrumental displays and various other local and foreign art styles. During the final three days, Best Cadet (BC) selection took place. The BC selection included tests such as extempore, debates, written exam, drill and firing tests in order to select the Best cadet of the camp. Photo shoots and cultural programs were conducted on the final day of the camp. The cadets left the camp venue on 1st September, 2022 and reached Anna University by 3:00 PM. Following, they reported at the unit by 4:00 PM and dispersed.`,
     imgList: [
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",
   },
   {
+    id: "1",
     title: "Chess Olympiad - Inaguration Ceremony",
     date: "28/07/2022",
     location: "Nehru Stadium, Chennai",
@@ -130,16 +149,19 @@ export const eventList = [
         The cadets of NCC Army Wing of Anna University attended the event on 28th July, 2022. They assembled and left the NCC unit at 2:00 PM for the event venue. On reaching the venue, the cadets were guided into the indoor stadium and seated. The inauguration ceremony started at 4:00 PM also featured art and cultural performances, such as a special dance-song “Vanakkam Chennai, Vanakkam Chess”. Players from different countries received a musical welcome when they arrived at the venue. Before the inauguration, a musical programme showcased ancient Tamil history in a nutshell. It was directed by Vignesh Sivan and narrated by veteran actor Kamal Haasan. Nearing the end of the program, the cadets left the venue and reached the unit by 7:00 PM.`,
     imgList: [
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_1.jpg",
+        id: "1",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_1.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_2.jpg",
+        id: "2",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_2.jpg",
       },
       {
-        caption: "assets/images/ncc_logo.png",
-        imageURL: "assets/images/ncc_3.jpg",
+        id: "3",
+        caption: "src/assets/images/ncc_logo.png",
+        imageURL: "src/assets/images/ncc_3.jpg",
       },
     ],
     fileURL: "url",

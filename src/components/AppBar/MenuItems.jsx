@@ -1,4 +1,4 @@
-import menu from "../assets/resource/menu";
+import menu from "../../assets/resource/menu";
 import { Box, Button, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 

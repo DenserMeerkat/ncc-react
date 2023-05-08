@@ -1,7 +1,7 @@
 import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
-import CustomAppBar from "../components/AppBar";
+import CustomAppBar from "../components/AppBar/AppBar";
 import Batch from "../components/Batch";
-import EventCard from "../components/EventCard";
+import EventCard from "../components/EventCard/EventCard";
 import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
 import Flex from "../utils/Flex";
 

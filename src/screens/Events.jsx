@@ -1,7 +1,8 @@
 import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
-import CustomAppBar from "../components/AppBar";
+import CustomAppBar from "../components/AppBar/AppBar";
 import Batch from "../components/Batch";
-import EventCard from "../components/EventCard";
+import { eventList } from "../assets/resource/events";
+import EventCard from "../components/EventCard/EventCard";
 import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
 import Flex from "../utils/Flex";
 
@@ -32,17 +33,34 @@ function Events() {
         }}
       >
         <Paper elevation={4}>
-          <Container>
-            <Box paddingTop={3} paddingBottom={3}>
-              <Flex flexWrap={"wrap"} justifyContent={"center"}>
-                <EventCard></EventCard>
-              </Flex>
-            </Box>
-          </Container>
+          <Box padding={3}>
+            <EventCards></EventCards>
+          </Box>
         </Paper>
       </Container>
     </Box>
   );
 }
+
+const EventCards = () => {
+  const items = eventList.map((item) => {
+    return (
+      <EventCard
+        key={item.id}
+        title={item.title}
+        date={item.date}
+        location={item.location}
+        description={item.description}
+        imgList={item.imgList}
+        fileURL={item.fileURL}
+      />
+    );
+  });
+  return (
+    <Flex flexWrap={"wrap"} justifyContent={"center"} gap={4}>
+      {items}
+    </Flex>
+  );
+};
 
 export default Events;

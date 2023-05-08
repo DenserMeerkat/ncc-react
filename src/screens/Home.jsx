@@ -1,5 +1,5 @@
 import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
-import CustomAppBar from "../components/AppBar";
+import CustomAppBar from "../components/AppBar/AppBar";
 import { Benefits } from "../components/Benefits";
 import benefits from "../assets/resource/menu.js";
 import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";

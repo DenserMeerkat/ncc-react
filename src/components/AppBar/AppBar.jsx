@@ -1,4 +1,4 @@
-import nccLogo from "../assets/images/ncc_logo.png";
+import nccLogo from "../../assets/images/ncc_logo.png";
 import { useState } from "react";
 import {
   Container,
