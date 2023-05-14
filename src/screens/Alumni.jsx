@@ -1,13 +1,25 @@
-import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
 import CustomAppBar from "../components/AppBar/AppBar";
+import Footer from "../components/Footer/Footer";
+import ItemCard from "../components/Cards/ItemCard";
+import Title from "../components/Title";
 import Batch from "../components/Batch";
-import EventCard from "../components/EventCard/EventCard";
-import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
+import { retired } from "../assets/resource/anos";
+import {
+  Container,
+  Box,
+  Paper,
+  Card,
+  useMediaQuery,
+  useTheme,
+  Typography,
+} from "@mui/material";
 import Flex from "../utils/Flex";
+import Padding from "../utils/Padding";
 
 function Alumni() {
   const theme = useTheme();
   const secondaryMain = theme.palette.secondary.main;
+
   return (
     <Box>
       <CustomAppBar activePage={"Alumni"}></CustomAppBar>
@@ -24,23 +36,52 @@ function Alumni() {
       <Container
         maxWidth="xl"
         top="39vw"
-        sx={{
-          left: 0,
-          right: 0,
-          position: "absolute",
-          marginTop: -4,
-        }}
+        sx={{ position: "relative", marginTop: -4, marginBottom: -4 }}
       >
         <Paper elevation={4}>
-          <Container>
-            <Box paddingTop={3} paddingBottom={3}>
-              <Flex flexWrap={"wrap"} justifyContent={"center"}></Flex>
-            </Box>
-          </Container>
+          <Box paddingTop={4}>
+            <Container maxWidth="lg">
+              <Title title={"Associate NCC Officers"} />
+              <Padding paddingTop={4} />
+              <Flex
+                alignItems={"center"}
+                flexWrap={"wrap"}
+                justifyContent={"center"}
+                gap={4}
+              >
+                <RetiredItemCards />
+              </Flex>
+              <Padding padding={4} />
+              <Title title={"Batches"} />
+              <Batch />
+              <Padding padding={4} />
+            </Container>
+          </Box>
         </Paper>
       </Container>
+      <Footer />
     </Box>
   );
 }
+
+const RetiredItemCards = () => {
+  const items = retired.map((item) => {
+    return (
+      <ItemCard
+        key={item.id}
+        name={item.name}
+        rank={item.rank}
+        img={item.img}
+        desc={item.desc}
+        plat={item.plat}
+      />
+    );
+  });
+  return (
+    <Flex flexWrap={"wrap"} justifyContent={"center"} gap={4}>
+      {items}
+    </Flex>
+  );
+};
 
 export default Alumni;

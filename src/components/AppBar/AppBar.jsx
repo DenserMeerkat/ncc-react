@@ -95,6 +95,7 @@ function CustomAppBar(props) {
                 />
               ) : (
                 <IconButton
+                  size="small"
                   onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
                 >
                   <Menu />

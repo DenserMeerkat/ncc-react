@@ -1,7 +1,19 @@
-import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
+import { current } from "../assets/resource/anos";
 import CustomAppBar from "../components/AppBar/AppBar";
+import Footer from "../components/Footer/Footer";
+import ItemCard from "../components/Cards/ItemCard";
+import Title from "../components/Title";
 import Batch from "../components/Batch";
-import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
+import Flex from "../utils/Flex";
+import Padding from "../utils/Padding";
+import {
+  Container,
+  Box,
+  Paper,
+  useMediaQuery,
+  useTheme,
+  Typography,
+} from "@mui/material";
 
 function About() {
   const showImage = useMediaQuery("(min-width: 600px)");
@@ -23,19 +35,50 @@ function About() {
       <Container
         maxWidth="xl"
         top="39vw"
-        sx={{
-          left: 0,
-          right: 0,
-          position: "absolute",
-          marginTop: -4,
-        }}
+        sx={{ position: "relative", marginTop: -4, marginBottom: -4 }}
       >
         <Paper elevation={4}>
-          <Batch></Batch>
+          <Box paddingTop={4}>
+            <Container maxWidth="lg">
+              <Title title={"Associate NCC Officers"} />
+              <Padding paddingTop={4} />
+              <Flex
+                alignItems={"center"}
+                flexWrap={"wrap"}
+                justifyContent={"center"}
+                gap={4}
+              >
+                <CurrentItemCards />
+              </Flex>
+            </Container>
+            <Padding padding={2} />
+            <Container maxWidth="lg"></Container>
+          </Box>
         </Paper>
       </Container>
+      <Footer />
     </Box>
   );
 }
+
+const CurrentItemCards = () => {
+  const items = current.map((item) => {
+    return (
+      <ItemCard
+        key={item.id}
+        name={item.name}
+        rank={item.rank}
+        img={item.img}
+        desc={item.desc}
+        plat={item.plat}
+      />
+    );
+  });
+  return (
+    <Flex flexWrap={"wrap"} justifyContent={"center"} gap={4}>
+      {items}
+    </Flex>
+  );
+};
 
 export default About;

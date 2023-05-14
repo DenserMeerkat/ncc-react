@@ -1,11 +1,22 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import { Tabs, Box, Tab, useTheme, useMediaQuery } from "@mui/material";
+import {
+  Container,
+  Tabs,
+  Box,
+  Tab,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { buttonClasses } from "@mui/base/Button";
 import { tabClasses } from "@mui/base/Tab";
 import { alpha } from "@mui/material";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
+import { batches } from "../assets/resource/batch";
+import ItemCard from "./Cards/ItemCard";
+import Flex from "../utils/Flex";
+import Padding from "../utils/Padding";
 
 export default function Batch() {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -77,12 +88,9 @@ export default function Batch() {
         id={`full-width-tabpanel-${index}`}
         aria-labelledby={`full-width-tab-${index}`}
         {...other}
+        sx={{ backgroundColor: "transparent" }}
       >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <p>{children}</p>
-          </Box>
-        )}
+        {value === index && <Box>{children}</Box>}
       </Box>
     );
   }
@@ -92,12 +100,92 @@ export default function Batch() {
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
   };
-
+  const tabs = batches.map((batch, index) => {
+    return (
+      <StyledTab key={index} value={index} label={batch.year.substring(5, 9)} />
+    );
+  });
+  const tabViews = batches.map((batch, index) => {
+    return (
+      <TabPanel
+        key={batch.year}
+        value={value}
+        index={index}
+        dir={theme.direction}
+      >
+        <Flex flexWrap="wrap" justifyContent="center" gap={2}>
+          <ItemCard
+            key={batch.csuo.name}
+            name={batch.csuo.name}
+            rank={batch.csuo.rank}
+            img={batch.csuo.img}
+            desc={batch.csuo.desc}
+            plat={batch.csuo.plat}
+          />
+          <Flex
+            flexWrap={"wrap"}
+            alignItems="center"
+            justifyContent="center"
+            gap={2}
+          >
+            <ItemCard
+              key={batch.cuo1.name}
+              name={batch.cuo1.name}
+              rank={batch.cuo1.rank}
+              img={batch.cuo1.img}
+              desc={batch.cuo1.desc}
+              plat={batch.cuo1.plat}
+            />
+            <ItemCard
+              key={batch.cuo2.name}
+              name={batch.cuo2.name}
+              rank={batch.cuo2.rank}
+              img={batch.cuo2.img}
+              desc={batch.cuo2.desc}
+              plat={batch.cuo2.plat}
+            />
+            <ItemCard
+              key={batch.cuo3.name}
+              name={batch.cuo3.name}
+              rank={batch.cuo3.rank}
+              img={batch.cuo3.img}
+              desc={batch.cuo3.desc}
+              plat={batch.cuo3.plat}
+            />
+          </Flex>
+          <Flex
+            flexWrap={"wrap"}
+            alignItems="center"
+            justifyContent="center"
+            gap={4}
+          >
+            <ItemCard
+              key={batch.csm.name}
+              name={batch.csm.name}
+              rank={batch.csm.rank}
+              img={batch.csm.img}
+              desc={batch.csm.desc}
+              plat={batch.csm.plat}
+            />
+            <ItemCard
+              key={batch.cqms.name}
+              name={batch.cqms.name}
+              rank={batch.cqms.rank}
+              img={batch.cqms.img}
+              desc={batch.cqms.desc}
+              plat={batch.cqms.plat}
+            />
+          </Flex>
+        </Flex>
+      </TabPanel>
+    );
+  });
   return (
     <Box
       display={"flex"}
       flexDirection={isNonMobileScreens ? "row" : "column"}
-      sx={{ width: "90%", margin: "auto" }}
+      justifyContent={"space-between"}
+      backgroundColor={"transparent"}
     >
       <StyledTabs
         value={value}
@@ -109,27 +197,17 @@ export default function Batch() {
         allowScrollButtonsMobile
         sx={{
           textTransform: "none",
-          minWidth: 0,
         }}
       >
-        <StyledTab value={0} label="2021" />
-        <StyledTab value={1} label="2020" />
-        <StyledTab value={2} label="2019" />
-        <StyledTab value={3} label="2018" />
-        <StyledTab value={4} label="2017" />
-        <StyledTab value={5} label="2016" />
+        {tabs}
       </StyledTabs>
       <SwipeableViews
+        sx={{ backgroundColor: "transparent" }}
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={4} dir={theme.direction}></TabPanel>
-        <TabPanel value={value} index={5} dir={theme.direction}></TabPanel>
+        {tabViews}
       </SwipeableViews>
     </Box>
   );

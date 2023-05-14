@@ -1,5 +1,6 @@
 import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
 import CustomAppBar from "../components/AppBar/AppBar";
+import Footer from "../components/Footer/Footer";
 import { Benefits } from "../components/Benefits";
 import benefits from "../assets/resource/menu.js";
 import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
@@ -40,12 +41,7 @@ function Home() {
       <Container
         maxWidth="xl"
         top="39vw"
-        sx={{
-          left: 0,
-          right: 0,
-          position: "absolute",
-          marginTop: -4,
-        }}
+        sx={{ position: "relative", marginTop: -4, marginBottom: -4 }}
       >
         <Paper elevation={4}>
           <Box sx={{ padding: 1 }}>
@@ -72,6 +68,7 @@ function Home() {
           </Container>
         </Paper>
       </Container>
+      <Footer />
     </Box>
   );
 }

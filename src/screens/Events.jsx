@@ -1,10 +1,12 @@
 import nccWallpaper from "../assets/images/ncc_wallpaper.jpg";
 import CustomAppBar from "../components/AppBar/AppBar";
+import Footer from "../components/Footer/Footer";
 import Batch from "../components/Batch";
 import { eventList } from "../assets/resource/events";
-import EventCard from "../components/EventCard/EventCard";
+import EventCard from "../components/Cards/EventCard";
 import { Container, Box, Paper, useMediaQuery, useTheme } from "@mui/material";
 import Flex from "../utils/Flex";
+import Padding from "../utils/Padding";
 
 function Events() {
   const theme = useTheme();
@@ -25,19 +27,16 @@ function Events() {
       <Container
         maxWidth="xl"
         top="39vw"
-        sx={{
-          left: 0,
-          right: 0,
-          position: "absolute",
-          marginTop: -4,
-        }}
+        sx={{ position: "relative", marginTop: -4, marginBottom: -4 }}
       >
         <Paper elevation={4}>
-          <Box padding={3}>
+          <Padding paddingTop={2} />
+          <Padding padding={3}>
             <EventCards></EventCards>
-          </Box>
+          </Padding>
         </Paper>
       </Container>
+      <Footer />
     </Box>
   );
 }

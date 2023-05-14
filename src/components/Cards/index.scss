@@ -1,0 +1,48 @@
+div {
+  &::-webkit-scrollbar-button {
+    height: 4px;
+    width: 4px;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    margin-block: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ededed;
+    border-radius: 5px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #c3c3c3;
+  }
+}
+
+.dot-list-class {
+  padding-bottom: 20px;
+  button {
+    margin-right: 10px;
+    height: 8px;
+    width: 8px;
+    border: none;
+    outline: none;
+    opacity: 40%;
+    box-shadow: 0 0 5px #000;
+  }
+  .react-multi-carousel-dot--active {
+    button {
+      opacity: 100%;
+      background: white;
+    }
+  }
+}
+
+.carousal-item {
+  .img {
+    display: none;
+  }
+}

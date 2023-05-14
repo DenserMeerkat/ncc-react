@@ -3,9 +3,35 @@
 }
 
 body {
-  height: 100vw;
   width: 100%;
   background-color: #d8d8d8;
+  overflow-y: overlay;
+  background: rgba(0, 0, 0, 0.3);
+}
+body {
+  &::-webkit-scrollbar-button {
+    height: 4px;
+    width: 4px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar {
+    width: 0.6vw;
+    margin: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ffcece;
+    border-radius: 5px;
+    margin-block: 0.5em;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgb(255, 133, 133);
+  }
 }
 
 .page-container {
